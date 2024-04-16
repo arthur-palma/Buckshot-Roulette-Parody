@@ -1,0 +1,476 @@
+@import url("https://fonts.googleapis.com/css2?family=Jersey+20&family=Rye&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rye", serif;
+}
+
+.container {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  margin: 0px 1em;
+  max-height: 100vh;
+  height: 90vh;
+}
+
+.search-game {
+  max-width: 1920px;
+  background-image: url("./assets/background_inicial.png");
+  opacity: 70%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top center;
+  justify-content: center;
+  align-items: flex-start;
+  width: 69.5%;
+  height: 80vh;
+}
+
+.title {
+  text-align: center;
+  color: rgb(252, 252, 252);
+  font-size: 50px;
+  font-weight: lighter;
+  text-shadow: 0px 20px 3px rgb(0, 0, 0);
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  font-weight: lighter;
+  text-shadow: 0px 15px 3px rgb(0, 0, 0);
+}
+
+.search-game-button-div {
+  z-index: 5;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  top: 15%;
+  gap: 3em;
+  padding: 5em;
+}
+
+.search-game-button {
+  width: 250px;
+  height: 3em;
+}
+
+.game_board {
+  background-image: url("./assets/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  align-items: flex-start;
+  width: 80%;
+  height: 100%;
+  max-width: 1550px;
+  max-height: 870px;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 2px;
+  border-radius: 1em;
+}
+
+.gif-container {
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  height: 800px;
+}
+
+.gif-overlay {
+  border-radius: 1em;
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.warning {
+  text-align: center;
+  color: white;
+  font-size: 25px;
+}
+
+.items-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  position: absolute;
+  bottom: 5%;
+  justify-self: flex-start;
+  padding-left: 10%;
+  gap: 130px;
+}
+
+.players-info-container {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 26.5%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 14%;
+  padding-top: 3%;
+}
+
+.round-info-label {
+  font-size: 22px;
+}
+
+.player-info {
+  height: 30%;
+  width: 22.5%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20%;
+  padding: 0px 20px;
+}
+
+.name-and-items {
+  align-self: center;
+  height: 60%;
+  padding-top: 3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.name-text {
+  text-align: start;
+  width: 100%;
+  font-size: 20px;
+  color: black;
+}
+
+.lifes {
+  display: flex;
+  gap: 10px;
+  align-self: center;
+}
+
+.item-button {
+  height: 150px;
+  width: 150px;
+  background-color: transparent;
+  border: none;
+  color: transparent;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.3s ease;
+  z-index: 5;
+}
+
+.item-button:hover {
+  transform: scale(1.2);
+}
+
+.item-button:hover::after {
+  content: attr(data-description);
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+
+.item-button.item-Cigarrete {
+  background-image: url("./assets/Cigarrete.png");
+}
+
+.item-button.item-Saw {
+  background-image: url("./assets/Saw.png");
+}
+
+.item-button.item-Handcuffs {
+  background-image: url("./assets/Handcuffs.png");
+}
+
+.item-button.item-Beer {
+  background-image: url("./assets/Beer.png");
+}
+
+.item-button.item-MagnifyingGlass {
+  background-image: url("./assets/MagnifyingGlass.png");
+}
+
+.icons {
+  width: 30px;
+  height: 30px;
+}
+
+.warning-icons {
+  width: 35px;
+  height: 35px;
+}
+
+.item-icon {
+  width: 80px;
+  height: 70px;
+}
+
+.round-warning-container {
+  position: absolute;
+  left: 4.8%;
+  top: 31%;
+  width: 18%;
+  padding: 1%;
+  padding-top: 0;
+}
+
+.black-screen {
+  z-index: 20;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  border: 12px solid black;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons-box-div {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  right: 10%;
+  bottom: 5%;
+  gap: 3em;
+  justify-content: center;
+  width: 30%;
+}
+
+.buttons-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.action-button {
+  background-color: transparent;
+  border: none;
+  color: #000;
+  font-size: 40px;
+}
+
+.action-label {
+  text-align: center;
+  font-size: 45px;
+}
+
+.action-button:hover {
+  transform: scale(1.2);
+  color: rgb(184, 22, 22);
+  text-shadow: 1px 5px 8px rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+.black-screen {
+  color: white;
+  font-size: 30px;
+}
+
+@media screen and (max-width: 1920px) {
+  .game_board {
+    width: 1300px;
+    height: 750px;
+  }
+}
+
+@media screen and (max-width: 1360px) {
+  .game_board {
+    height: 450px;
+    width: 800px;
+  }
+
+  .round-info-label {
+    font-size: 16px;
+  }
+
+  .action-label {
+    font-size: 25px;
+  }
+
+  .action-button {
+    font-size: 30px;
+  }
+
+  .buttons-box-div {
+    right: 10%;
+    bottom: 5%;
+    gap: 2em;
+    justify-content: center;
+    width: 30%;
+  }
+
+  .search-game {
+    height: 80vh;
+    width: 100%;
+  }
+
+  .search-game-button-div {
+    top: 10%;
+  }
+
+  .title {
+    font-size: 38px;
+    text-shadow: 0px 20px 3px rgb(0, 0, 0);
+    margin-bottom: 10px;
+  }
+
+  .subtitle {
+    text-shadow: 0px 15px 3px rgb(0, 0, 0);
+  }
+
+  .items-container {
+    bottom: 7%;
+    gap: 80px;
+    padding-left: 7%;
+  }
+
+  .item-button {
+    height: 100px;
+    width: 100px;
+  }
+
+  .players-info-container {
+    height: 26.5%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 14.5%;
+    padding-top: 3%;
+  }
+
+  .player-info {
+    height: 30%;
+    width: 22.5%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 17%;
+    padding: 0px 2%;
+  }
+
+  .name-and-items {
+    align-self: center;
+    height: 60%;
+    padding-top: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+  }
+
+  .name-text {
+    font-size: 12px;
+  }
+
+  .lifes {
+    gap: 4px;
+  }
+
+  .icons {
+    width: 20px;
+    height: 20px;
+  }
+
+  .item-icon {
+    width: 55px;
+    height: 45px;
+  }
+
+  .warning-icons {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .game_board {
+    width: 550px;
+    height: 300px;
+  }
+
+  .name-text {
+    font-size: 12px;
+  }
+
+  .lifes {
+    gap: 2px;
+  }
+
+  .icons {
+    width: 15px;
+    height: 15px;
+  }
+
+  .item-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .players-info-container {
+    padding: 0px 13%;
+    padding-top: 3%;
+  }
+
+  .round-info-label {
+    font-size: 12px;
+  }
+
+  .warning-icons {
+    width: 15px;
+    height: 15px;
+  }
+
+  .item-button {
+    width: 65px;
+    height: 65px;
+  }
+
+  .items-container {
+    gap: 55px;
+  }
+
+  .buttons-box-div {
+    gap: 1em;
+  }
+
+  .action-button {
+    font-size: 18px;
+  }
+
+  .action-label {
+    font-size: 20px;
+  }
+}
