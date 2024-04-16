@@ -11,13 +11,12 @@
   box-sizing: border-box;
   display: flex;
   justify-content: center;
-  margin: 0px 1em;
+  align-items: center;
   max-height: 100vh;
-  height: 90vh;
+  height: 100vh;
 }
 
 .search-game {
-  max-width: 1920px;
   background-image: url("./assets/background_inicial.png");
   opacity: 70%;
   background-size: contain;
@@ -25,8 +24,10 @@
   background-position: top center;
   justify-content: center;
   align-items: flex-start;
-  width: 69.5%;
-  height: 80vh;
+  width: 80%;
+  height: 100%;
+  max-width: 1550px;
+  max-height: 870px;
 }
 
 .title {
@@ -76,8 +77,6 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: end;
-  padding: 2px;
   border-radius: 1em;
 }
 
@@ -299,7 +298,7 @@
   font-size: 30px;
 }
 
-@media screen and (max-width: 1920px) {
+@media screen and (max-width: 1900px) {
   .game_board {
     width: 1300px;
     height: 750px;
